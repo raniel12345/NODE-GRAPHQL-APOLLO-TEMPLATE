@@ -7,10 +7,6 @@
   },
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s",
-    "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js",
     "start-dev": "nodemon --exec babel-node src/index.js",
     "testserver": "TEST_DATABASE=mytestdatabase npm start",
     "test": "mocha --require @babel/register 'src/**/*.spec.js'"
@@ -34,13 +30,10 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/register": "^7.6.2",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "axios": "^0.19.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "mocha": "^6.2.1"
   }
